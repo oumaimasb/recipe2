@@ -9,11 +9,11 @@ const NavBar = () => {
       <Navbar bg="dark" variant="dark">
         <Container>
           <Nav className="me-auto">
-            <Nav.Link as={Link} to={"/Welcome"}>
+            <Nav.Link as={Link} to={"/"}>
               Welcome
             </Nav.Link>
-            <Nav.Link as={Link} to={"/Home"}>
-              Home
+            <Nav.Link as={Link} to={"/CardRecipe"}>
+              Recipes
             </Nav.Link>
             <Nav.Link as={Link} to={"/About"}>
               About

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import Home from "./components/Home";
-import NavBar from "./Pages/NavBar";
+import CardRecipe from "./Pages/CardRecipe";
+import NavBar from "./components/NavBar";
 import About from "./Pages/About";
 import Welcome from "./Pages/Welcome";
 
@@ -43,10 +43,10 @@ const App = () => {
       <div>
         <NavBar />
         <Switch>
-          <Route path="/Welcome" exact>
+          <Route path="/" exact>
             <Welcome />
           </Route>
-          <Route path="/Home">
+          <Route path="/CardRecipe">
             <div className="App">
               <form onSubmit={getSearch} className="search-form">
                 <input
@@ -61,7 +61,7 @@ const App = () => {
               </form>
               <div className="recipes">
                 {recipes.map((recipe) => (
-                  <Home
+                  <CardRecipe
                     key={recipe.recipe.label}
                     title={recipe.recipe.label}
                     calories={recipe.recipe.calories}

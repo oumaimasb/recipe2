@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Card } from "react-bootstrap";
 import style from "../recipe.module.css";
 
-const Home = ({ title, calories, image, ingredients }) => {
+const CardRecipe = ({ title, calories, image, ingredients }) => {
   return (
     <div className={style.recipe}>
       <Card style={{ width: "18rem" }}>
@@ -22,4 +22,4 @@ const Home = ({ title, calories, image, ingredients }) => {
   );
 };
 
-export default Home;
+export default CardRecipe;
